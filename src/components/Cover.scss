@@ -1,0 +1,47 @@
+@import '../static/mixin';
+
+.cover-wrapper {
+  @include flex(column, flex-start, center);
+  gap: 30px;
+
+  .titleWrapper {
+    @include flex(column, flex-start, center);
+    gap: 10px;
+    padding: 15vh 0;
+    color: $green;
+
+    .title {
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .name {
+      font-size: 15px;
+    }
+  }
+
+  .start-quiz-button {
+    position: relative;
+    width: 30vw;
+    height: 30vw;
+    border: 1px solid $green;
+    border-radius: 100%;
+    color: $green;
+    background: $green;
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include flex(row, center, center);
+      content: '퀴즈 풀기';
+      width: 80%;
+      height: 80%;
+      border: 1.5px solid $green;
+      border-radius: 100%;
+      transform: translate(-50%, -50%);
+      background: white;
+      font-size: 15px;
+    }
+  }
+}
