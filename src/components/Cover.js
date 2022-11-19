@@ -1,8 +1,10 @@
 import React from 'react';
 import './Cover.scss';
 import { Link } from "react-router-dom";
+import Refresh from "./Refresh";
 
 export default function Cover() {
+
   return (
     <section className={'cover-wrapper'}>
       <div className={'titleWrapper'}>
@@ -12,6 +14,7 @@ export default function Cover() {
       <Link to={'quiz'}>
         <button className={'start-quiz-button'}/>
       </Link>
+      <Refresh />
     </section>
   );
 }

@@ -1,19 +1,14 @@
+import { Suspense } from "react";
 import './App.scss';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { RecoilRoot } from "recoil";
-import Header from "./components/Header";
-import Cover from "./components/Cover";
+import Routers from "./Routers";
 
 function App() {
   return (
     <RecoilRoot>
-      <BrowserRouter>
-        <div className='quiz-wrapper'>
-        <Routes>
-          <Route path="/" element={<Cover />} />
-        </Routes>
-        </div>
-      </BrowserRouter>
+      <Suspense fallback={<div>loading...</div>}>
+        <Routers />
+      </Suspense>
     </RecoilRoot>
   );
 }

@@ -1,0 +1,41 @@
+@import 'src/static/mixin';
+
+.incorrect-answer-note-wrapper {
+  margin-bottom: 60px;
+  overflow: scroll;
+  .note-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .incorrect-answer-wrapper {
+    .note-question {
+      padding: 10px;
+      border-radius: 10px;
+      background: $green;
+      color: white;
+      font-size: 12px;
+    }
+
+    .answer-wrapper {
+      @include flex(column, flex-start, flex-start);
+      gap: 10px;
+      padding: 10px;
+      font-size: 12px;
+      color: $green;
+    }
+  }
+
+  .re {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    background: $green;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+  }
+}
